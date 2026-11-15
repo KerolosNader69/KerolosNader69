@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/FOCUS-VISION_%7C_LLMS_%7C_SAAS-FFD60A?style=for-the-badge&labelColor=1d1d26" alt="Focus: Computer Vision, LLMs, SaaS" />
 </p>
 
-> I build AI products end to end, from the model to production: **94%+** retinal-disease accuracy on Huawei ModelArts, **3** production ML pipelines shipped with a **12-member** AI team, and an algorithms program for **100+** students.
+> AI Team Lead at **Netezens** and Technical Lead at **ICPC AIU**. I lead a 12-member AI team shipping production ML, train 100+ competitive programmers, and build my own AI products end to end, from healthcare computer vision to AI-graded exams and full learning platforms.
 
 ## 🦇 KERO NIGHTWATCH
 
@@ -51,8 +51,7 @@ I lead AI work at a startup, train competitive programmers at my university, and
 | **[Ain ElHayah](https://github.com/KerolosNader69/Ain_ElHayah)**<br><sub>AI healthcare platform</sub><br><sub>`Flutter` `Python` `CNNs` `RAG` `Huawei Cloud`</sub><br><sub>[open dossier ↗](https://kerolosnader69.github.io/KerolosNader69/?case=ain)</sub> | Eye-disease screening needs specialists who are hard to reach.<br>→ **94%+** retinal fundus accuracy · **Top 50 of 1,200+** at Huawei Developer Competition 2025 |
 | **[Examly](https://examly.site)**<br><sub>AI oral-exam SaaS · Founder</sub><br><sub>`Next.js` `Supabase` `Deepgram` `Gemini`</sub><br><sub>[open dossier ↗](https://kerolosnader69.github.io/KerolosNader69/?case=examly)</sub> | Teachers can't grade spoken exams at scale.<br>→ Live at **[examly.site](https://examly.site)**: grades by meaning, not keywords, in English & Arabic (Egyptian dialect) |
 | **[Vitalia Academy](https://vitalia.academy)**<br><sub>Full online academy · Built end to end</sub><br><sub>`Next.js` `Supabase` `Cloudflare`</sub><br><sub>[open dossier ↗](https://kerolosnader69.github.io/KerolosNader69/?case=vitalia)</sub> | Instructors and learners need one place to teach, learn and certify.<br>→ Live at **[vitalia.academy](https://vitalia.academy)**: a bilingual academy with student, instructor, admin & super-admin dashboards and an AI assistant |
-| **Rep Reckoner**<br><sub>AI fitness app</sub><br><sub>`Flutter` `FastAPI` `Supabase` `Gemini`</sub><br><sub>[open dossier ↗](https://kerolosnader69.github.io/KerolosNader69/?case=rep)</sub> | Generic workout plans ignore the person doing them.<br>→ **Launched on Google Play**: personalised plans from each user's physiological data |
-<!-- TODO: add the Google Play link for Rep Reckoner once confirmed -->
+| **[Rep Reckoner](https://play.google.com/store/apps/details?id=app.rep.reckoner)**<br><sub>AI fitness app</sub><br><sub>`Flutter` `FastAPI` `Supabase` `Gemini`</sub><br><sub>[open dossier ↗](https://kerolosnader69.github.io/KerolosNader69/?case=rep)</sub> | Generic workout plans ignore the person doing them.<br>→ **[Live on Google Play](https://play.google.com/store/apps/details?id=app.rep.reckoner)**: personalised plans from each user's physiological data |
 
 <details>
 <summary><b>Inside each case</b></summary>
