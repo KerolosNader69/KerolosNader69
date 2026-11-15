@@ -379,7 +379,7 @@ const PANELS = {
 <b>EDUCATION</b> ....... B.Sc. Computer Science & Engineering
                   Alamein International University · 2027
 <b>LANGUAGES</b> ....... Arabic (native) · English (professional)</div>
-    <p>AI Team Lead at Netezens and Technical Lead at ICPC AIU. I lead a 12-member AI team shipping production ML, train 100+ competitive programmers, and build my own AI products end to end, from healthcare computer vision to AI-graded exams and full learning platforms.</p>`],
+    <p>I turn ideas into working AI products: custom models trained on your own data, computer vision, LLM features, RAG chatbots and AI assistants, built into full-stack web and mobile apps (Next.js, Flutter) with the backend, database and cloud deployment behind them, from first prototype to production.</p>`],
   help: ['MANUAL', 'How to use', () => `
     <div class="entry"><h3>Sweep</h3><p>Move the mouse to steer the searchlight. On a phone, swipe the city left and right.</p></div>
     <div class="entry"><h3>Open a case</h3><p>Each yellow beacon on a rooftop is a case file. Click it to open the dossier.</p></div>
