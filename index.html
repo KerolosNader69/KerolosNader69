@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0b0f" />
+    <meta name="description" content="Kerollos Nader's interactive AI engineering portfolio: follow the signal over the city and open the case files." />
+    <title>Kero Nightwatch — AI Engineer Portfolio</title>
+    <link rel="icon" href="assets/bat-signal.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="bat" viewBox="-115 -35 230 62">
+              <path d="M4,-6 C26,-26 58,-38 88,-30 L112,-18 Q92,-8 98,8 Q76,2 74,22 Q46,6 14,18 Z"/>
+              <path d="M4,-6 C26,-26 58,-38 88,-30 L112,-18 Q92,-8 98,8 Q76,2 74,22 Q46,6 14,18 Z" transform="scale(-1,1)"/>
+              <ellipse cx="0" cy="2" rx="9" ry="20"/><circle cx="0" cy="-17" r="7"/>
+              <path d="M-6,-20 L-8,-31 L-2,-23 Z M6,-20 L8,-31 L2,-23 Z"/>
+            </symbol></defs></svg>
+    <main class="console" aria-label="Kero Nightwatch portfolio console">
+      <header class="top-rail">
+        <button class="rail-btn" type="button" data-panel="profile" aria-label="Open identity file"><svg class="ico bat" viewBox="0 0 230 62" aria-hidden="true"><use href="#bat" width="230" height="62"/></svg></button>
+        <a class="logo" href="https://github.com/KerolosNader69" target="_blank" rel="noreferrer" aria-label="Open Kerollos Nader's GitHub profile">
+          <span>KERO</span><i aria-hidden="true"></i><span>NIGHTWATCH</span>
+        </a>
+        <button class="rail-btn" type="button" data-panel="help" aria-label="How to use the console">?</button>
+      </header>
+
+      <nav class="side-nav" aria-label="Console navigation">
+        <button type="button" data-panel="cases"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h7l2 2h9v10H3z M3 7V5h6"/></svg><b>Case files</b></button>
+        <button type="button" data-panel="toolkit"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18 M5 12v5h4v-5 M10 12v5h4v-5 M15 12v5h4v-5 M3 9l9-4 9 4"/></svg><b>Toolkit</b></button>
+        <button type="button" data-panel="recognition"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14a5 5 0 1 0 0-10a5 5 0 0 0 0 10z M8.5 12.5L7 21l5-3 5 3-1.5-8.5"/></svg><b>Recognition</b></button>
+        <button type="button" data-panel="signal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l5-9h3l-3 9z M12 11l8-7 M12 11l9-2 M12 11l6-8"/></svg><b>Signal</b></button>
+      </nav>
+
+      <section class="screen" id="screen" aria-label="Interactive city of case files">
+        <svg class="city" id="city" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <defs>
+            <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#FFD60A" stop-opacity=".42"/>
+              <stop offset=".5" stop-color="#FFD60A" stop-opacity=".1"/>
+              <stop offset="1" stop-color="#FFD60A" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="beam" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#FFD60A" stop-opacity=".2"/>
+              <stop offset="1" stop-color="#FFD60A" stop-opacity=".02"/>
+            </linearGradient>
+            <radialGradient id="spot" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#FFD60A" stop-opacity=".22"/>
+              <stop offset="1" stop-color="#FFD60A" stop-opacity="0"/>
+            </radialGradient>
+            <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+              <path d="M24 0H0V24" fill="none" stroke="#9a9aa8" stroke-opacity=".06"/>
+            </pattern>
+            
+          </defs>
+          <rect width="1200" height="620" fill="#0b0b0f"/>
+          <rect width="1200" height="620" fill="url(#grid)"/>
+          <g id="stars" fill="#9a9aa8"></g>
+          <g class="signal" id="signal">
+            <circle class="halo" cx="930" cy="120" r="150" fill="url(#halo)"/>
+            <circle cx="930" cy="120" r="62" fill="#FFD60A" opacity=".92"/>
+            <use href="#bat" x="878" y="98" width="106" height="36" fill="#0b0b0f" transform="rotate(-8 930 120)"/>
+          </g>
+          <g id="skyline-back" fill="#1d1d26" opacity=".5"></g>
+          <g id="skyline-front" fill="#1d1d26"></g>
+          <polygon style="mix-blend-mode:screen" id="beam-shape" fill="url(#beam)" points="600,560 612,560 612,560 600,560"/>
+          <circle id="spot-shape" cx="600" cy="300" r="120" fill="url(#spot)" opacity="0"/>
+          <g id="windows" fill="#FFD60A"></g>
+          <rect x="0" y="560" width="1200" height="60" fill="#0b0b0f"/>
+          <path d="M0 560H1200" stroke="#FFD60A" stroke-opacity=".25"/>
+        </svg>
+
+        <div class="marker-layer" id="marker-layer" aria-label="Case files on the map"></div>
+
+        <div class="scanlines" aria-hidden="true"></div>
+        <div class="hud-corner tl" aria-hidden="true"></div>
+        <div class="hud-corner tr" aria-hidden="true"></div>
+        <div class="hud-corner bl" aria-hidden="true"></div>
+        <div class="hud-corner br" aria-hidden="true"></div>
+
+        <div class="coordinates" aria-hidden="true">
+          <span>PATROL SECTOR 07</span>
+          <span id="readout">30.83° N · 28.95° E · EL ALAMEIN</span>
+        </div>
+
+        <div class="intro" id="intro">
+          <img class="intro-signal" src="assets/bat-signal.svg" alt="" aria-hidden="true" />
+          <p class="kicker">Signal detected over El Alamein</p>
+          <h1>Follow the signal.<br />Open the case files.</h1>
+          <p>Sweep the searchlight across the city. Every lit building is a confirmed case: a product, a role or an award.</p>
+          <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <button class="btn primary" type="button" id="start">Light the signal</button>
+        </div>
+
+        <div class="loading" id="loading" aria-live="polite" hidden>
+          <span>Calibrating searchlight</span>
+          <div><i></i></div>
+        </div>
+
+        <div class="hud" id="hud" hidden>
+          <div class="hud-title">
+            <span>Gotham night network</span>
+            <strong id="case-count">00 open case files</strong>
+          </div>
+          <div class="filters" role="group" aria-label="Filter case files">
+            <button type="button" data-filter="all" class="is-active">ALL</button>
+            <button type="button" data-filter="product">PRODUCTS</button>
+            <button type="button" data-filter="role">ROLES</button>
+            <button type="button" data-filter="award">AWARDS</button>
+            <span class="stepper">
+              <button type="button" id="prev" aria-label="Previous case file">‹</button>
+              <button type="button" id="next" aria-label="Next case file">›</button>
+            </span>
+          </div>
+        </div>
+
+        <article class="dossier" id="dossier" hidden aria-live="polite">
+          <button type="button" class="close" id="dossier-close" aria-label="Close case file">×</button>
+          <span class="dossier-type" id="d-type">Case file</span>
+          <h2 id="d-title">Title</h2>
+          <strong id="d-role">Role</strong>
+          <p id="d-copy"></p>
+          <ul class="facts" id="d-facts"></ul>
+          <div class="links" id="d-links"></div>
+          <small id="d-date"></small>
+        </article>
+
+        <aside class="panel" id="panel" hidden aria-live="polite">
+          <header>
+            <div><span id="panel-index">FILE 01</span><h2 id="panel-title">Case files</h2></div>
+            <button type="button" class="close" id="panel-close" aria-label="Close panel">×</button>
+          </header>
+          <div id="panel-body"></div>
+        </aside>
+      </section>
+
+      <footer class="bottom-rail">
+        <button type="button" class="lamp" id="lamp" aria-label="Light the signal to contact Kero">
+          <svg viewBox="0 0 40 28" aria-hidden="true"><path class="lamp-body" d="M6 22l8-12h7l-5 12z"/><path class="lamp-beam" d="M21 10L38 1v14z"/><rect class="lamp-base" x="2" y="22" width="18" height="4" rx="1"/></svg>
+          <b>Light the signal</b>
+        </button>
+        <div class="status">
+          <span class="light" aria-hidden="true"></span>
+          <span id="status">System ready</span>
+          <div class="track" aria-hidden="true"><i id="progress"></i></div>
+        </div>
+        <button type="button" class="rail-btn sound" id="sound" aria-label="Mute interface sound" aria-pressed="false">SFX ON</button>
+      </footer>
+    </main>
+
+    <footer class="page-footer">
+      <a href="https://github.com/KerolosNader69/KerolosNader69#readme">README</a>
+      <strong>KERO NIGHTWATCH</strong>
+      <a href="https://github.com/KerolosNader69" target="_blank" rel="noreferrer">GITHUB ↗</a>
+    </footer>
+
+    <noscript>This console needs JavaScript. The full profile is in the README: https://github.com/KerolosNader69</noscript>
+    <script src="script.js"></script>
+  </body>
+</html>
