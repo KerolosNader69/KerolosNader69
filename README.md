@@ -187,7 +187,7 @@ I lead AI work at a startup, train competitive programmers at my university, and
 
 <p align="center">
   <a href="mailto:kfparody809@gmail.com"><img src="https://img.shields.io/badge/EMAIL-SEND_A_SIGNAL-FFD60A?style=for-the-badge&logo=gmail&logoColor=FFD60A&labelColor=1d1d26" alt="Email Kerollos Nader" /></a>
-  <a href="https://www.linkedin.com/in/kerollos-nader"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-FFD60A?style=for-the-badge&logo=linkedin&logoColor=FFD60A&labelColor=1d1d26" alt="Connect on LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/kerolos-nader"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-FFD60A?style=for-the-badge&logo=linkedin&logoColor=FFD60A&labelColor=1d1d26" alt="Connect on LinkedIn" /></a>
 </p>
 
 <p align="center"><sub><code>LAST UPDATED · NOVEMBER 2026</code></sub></p>
