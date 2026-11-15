@@ -1,0 +1,50 @@
+name: Refresh console preview
+
+# Re-shoots the README preview image whenever the console changes.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "styles.css"
+      - "script.js"
+      - "scripts/capture-preview.mjs"
+      - ".github/workflows/refresh-preview.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: console-preview
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1
+          npx playwright install --with-deps chromium
+
+      - name: Capture preview
+        run: node scripts/capture-preview.mjs
+
+      - name: Commit preview
+        run: |
+          git add assets/console-preview.png
+          if git diff --cached --quiet; then
+            echo "Preview already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh console preview"
+          git push
