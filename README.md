@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/FOCUS-VISION_%7C_LLMS_%7C_SAAS-FFD60A?style=for-the-badge&labelColor=1d1d26" alt="Focus: Computer Vision, LLMs, SaaS" />
 </p>
 
-> AI Team Lead at **Netezens** and Technical Lead at **ICPC AIU**. I lead a 12-member AI team shipping production ML, train 100+ competitive programmers, and build my own AI products end to end, from healthcare computer vision to AI-graded exams and full learning platforms.
+> I turn ideas into working AI products: custom models trained on your own data, computer vision, LLM features, RAG chatbots and AI assistants, built into full-stack web and mobile apps (Next.js, Flutter) with the backend, database and cloud deployment behind them, from first prototype to production.
 
 ## 🦇 KERO NIGHTWATCH
 
