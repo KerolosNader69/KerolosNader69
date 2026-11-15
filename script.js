@@ -101,7 +101,7 @@ const CERTS = [
 
 const LINKS = {
   email: 'mailto:kfparody809@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/kerollos-nader',
+  linkedin: 'https://www.linkedin.com/in/kerolos-nader',
   github: 'https://github.com/KerolosNader69'
 };
 
