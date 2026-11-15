@@ -31,7 +31,7 @@ const CASES = [
     title: 'Rep Reckoner', role: 'AI fitness app',
     copy: 'Generic workout plans ignore the person doing them. Rep Reckoner uses Gemini to build personalised training plans from each user\'s physiological data, backed by FastAPI with real-time sync through Supabase.',
     facts: ['Launched on Google Play', 'Gemini recommendations', 'Real-time sync'],
-    links: [],
+    links: [['Get it on Google Play', 'https://play.google.com/store/apps/details?id=app.rep.reckoner']],
     date: 'Flutter · FastAPI · Supabase', place: 'GOOGLE PLAY', x: 790, h: 245
   },
   {
@@ -379,7 +379,7 @@ const PANELS = {
 <b>EDUCATION</b> ....... B.Sc. Computer Science & Engineering
                   Alamein International University · 2027
 <b>LANGUAGES</b> ....... Arabic (native) · English (professional)</div>
-    <p>I build AI products end to end, from the model to production: computer vision, LLM apps with RAG, and full-stack SaaS.</p>`],
+    <p>AI Team Lead at Netezens and Technical Lead at ICPC AIU. I lead a 12-member AI team shipping production ML, train 100+ competitive programmers, and build my own AI products end to end, from healthcare computer vision to AI-graded exams and full learning platforms.</p>`],
   help: ['MANUAL', 'How to use', () => `
     <div class="entry"><h3>Sweep</h3><p>Move the mouse to steer the searchlight. On a phone, swipe the city left and right.</p></div>
     <div class="entry"><h3>Open a case</h3><p>Each yellow beacon on a rooftop is a case file. Click it to open the dossier.</p></div>
